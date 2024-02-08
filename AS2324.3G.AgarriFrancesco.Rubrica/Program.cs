@@ -69,7 +69,14 @@ namespace AS2324._3G.AgarriFrancesco.Rubrica
 
                     case 2:
 
-                        
+                        Console.WriteLine("ecco la stampa della rubrica\n");
+
+                        Console.WriteLine("numero\tcognome\tnome\tEmail\tsimpatia\tnickname\tanno di nascita\n");
+
+                        for (int i = 0; i < elementiRubrica; i++)
+                        {
+                            Console.WriteLine($"{i + 1}" + "\t" + Cognomi[i] + "\t" + Nomi[i] + "\t" + Email[i] + "\t" + Simpatia[i] + "\t" + Nickname[i] + "\t" + Annonascita[i] + "\n");
+                        }
 
                         break;
 

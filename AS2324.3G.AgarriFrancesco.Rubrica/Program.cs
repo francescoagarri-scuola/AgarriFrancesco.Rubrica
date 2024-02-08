@@ -82,7 +82,21 @@ namespace AS2324._3G.AgarriFrancesco.Rubrica
 
                     case 3:
 
-                        
+                        Console.WriteLine("inserisci il Nickname da ricercare:");
+                        string ricercaNickname = Convert.ToString(Console.ReadLine());
+                        int trovati = 0;
+
+                        for (int i = 0; i < elementiRubrica; i++)
+                        {
+                            if (Nickname[i] == ricercaNickname)
+                            {
+                                Console.WriteLine($"{i + 1}" + "\t" + Cognomi[i] + "\t" + Nomi[i] + "\t" + Email[i] + "\t" + Simpatia[i] + "\t" + Nickname[i] + "\t" + Annonascita[i] + "\n");
+                                trovati++;
+                            }
+                        }
+
+                        if (trovati == 0) 
+                            Console.WriteLine("non ho trovato nessun Nickname");
 
                         break;
 
@@ -95,8 +109,6 @@ namespace AS2324._3G.AgarriFrancesco.Rubrica
                 }
 
             } while (scelta != 0);
-
-            Console.ReadLine();
         }
     }
 }
